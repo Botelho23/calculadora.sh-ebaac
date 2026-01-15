@@ -1,34 +1,34 @@
 print("=== CALCULADORA SIMPLES ===")
 
-num1 = float(input("Digite o primeiro número: "))
-num2 = float(input("Digite o segundo número: "))
+try:
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
 
-print("\nEscolha a operação:")
-print("1 - Soma")
-print("2 - Subtração")
-print("3 - Multiplicação")
-print("4 - Divisão")
+    print("\nEscolha a operação:")
+    print("1 - Soma")
+    print("2 - Subtração")
+    print("3 - Multiplicação")
+    print("4 - Divisão")
 
-opcao = input("Digite a opção (1/2/3/4): ")
+    opcao = input("Digite a opção (1/2/3/4): ")
 
-if opcao == "1":
-    resultado = num1 + num2
-    print("Resultado:", resultado)
+    if opcao == "1":
+        print("Resultado:", num1 + num2)
 
-elif opcao == "2":
-    resultado = num1 - num2
-    print("Resultado:", resultado)
+    elif opcao == "2":
+        print("Resultado:", num1 - num2)
 
-elif opcao == "3":
-    resultado = num1 * num2
-    print("Resultado:", resultado)
+    elif opcao == "3":
+        print("Resultado:", num1 * num2)
 
-elif opcao == "4":
-    if num2 != 0:
-        resultado = num1 / num2
-        print("Resultado:", resultado)
+    elif opcao == "4":
+        if num2 != 0:
+            print("Resultado:", num1 / num2)
+        else:
+            print("Erro: divisão por zero!")
+
     else:
-        print("Erro: divisão por zero!")
+        print("Opção inválida!")
 
-else:
-    print("Opção inválida!")
+except ValueError:
+    print("Erro: digite apenas números válidos.")
